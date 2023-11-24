@@ -140,7 +140,7 @@ h2 {
   grid-area: announcements;
   display: grid;
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 
@@ -148,8 +148,31 @@ h2 {
 .main-section.trending {
   grid-area: trending;
   display: grid;
+  gap: 2rem;
+  padding: 1.5rem 0;
 }
 
+.trending-card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "profile username" "profile quot";
+  align-items: center;
+  column-gap: 0.7rem;
+  row-gap: 0.3rem;
+}
+
+.trending-card-profile {
+  grid-area: profile;
+}
+
+.trending-card-username {
+  grid-area: username;
+}
+
+.trending-card-quot {
+  grid-area: quot;
+}
 
 aside {
   grid-area: sidebar;
