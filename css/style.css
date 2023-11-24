@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
+.proto {
+  border: 1px solid red;
+}
+
 html {
   margin: 0;
   height: 100svh;
@@ -19,7 +24,57 @@ body {
 header {
   background-color: #adf7b6;
   grid-area: header;
+  display: grid;
+  align-items: center;
+  padding: 0 2rem;
 }
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 2rem;
+}
+
+.nav-profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.head-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+}
+
+.head-profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:  "icon greeting"
+                        "icon username";
+  column-gap: 1rem;
+  row-gap: 4px;
+}
+
+.head-profile-icon {
+  grid-area: icon;
+}
+
+.head-profile-username {
+  grid-area: username;
+}
+
+.head-profile-greeting{
+  grid-area: greeting;
+}
+
+.head-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
 
 main {
   background-color: #ffee93;
