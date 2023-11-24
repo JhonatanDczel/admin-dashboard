@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; !important
 }
 
 .proto {
@@ -14,8 +14,8 @@ html {
 body {
   margin: 0;
   display: grid;
-  height: 100%;
-  grid-template-rows: 180px 1fr;
+  height: 100svh;
+  grid-template-rows: 140px 1fr;
   grid-template-columns: minmax(200px, 2fr) 9fr;
   grid-template-areas:  "sidebar header"
                         "sidebar main";
@@ -27,7 +27,9 @@ header {
   display: grid;
   align-items: center;
   padding: 0 2rem;
+  border: 1px solid blue;
 }
+
 
 .nav-container {
   display: grid;
@@ -78,6 +80,8 @@ header {
 
 main {
   background-color: #ffee93;
+  overflow-y: scroll;
+  overflow-x: hidden;
   grid-area: main;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -88,6 +92,7 @@ main {
                         "projects trending";
   padding: 1.5rem;
   gap: 2rem;
+  align-items: start;
 }
 
 .projects-title {
@@ -133,10 +138,16 @@ h2 {
 
 .main-section.announcements{
   grid-area: announcements;
+  display: grid;
+  gap: 2rem;
+  padding: 1.5rem;
 }
+
+
 
 .main-section.trending {
   grid-area: trending;
+  display: grid;
 }
 
 
@@ -146,6 +157,7 @@ aside {
   display: grid;
   align-content: start;
   gap: 64px;
+  border: 1px solid black;
 }
 
 .logo-container {
