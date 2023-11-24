@@ -17,16 +17,40 @@ body {
 }
 
 header {
-  background-color: green;
+  background-color: #adf7b6;
   grid-area: header;
 }
 
 main {
-  background-color: yellow;
+  background-color: #ffee93;
   grid-area: main;
 }
 
 aside {
   grid-area: sidebar;
-  background-color: blue;
+  background-color: #b8e0d2;
+  display: grid;
+  align-content: start;
+  gap: 64px;
+}
+
+.logo-container {
+  background-color: #809bce;
+  width: 100%;
+  height: 70px;
+}
+
+.sidebar-options {
+  font-size: 24px;
+  background-color: #ff8fabaa;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar-options > li {
+  padding: 8px;
 }
