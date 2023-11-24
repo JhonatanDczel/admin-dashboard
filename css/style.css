@@ -47,9 +47,20 @@ header {
   gap: 2rem;
 }
 
+.nav-search {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.icon-search {
+  width: 30px;
+  height: 28px;
+}
+
 .nav-profile {
   display: grid;
   grid-template-columns: auto 1fr;
+  gap: 8px;
 }
 
 .head-container {
