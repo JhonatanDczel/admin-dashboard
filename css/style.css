@@ -79,7 +79,66 @@ header {
 main {
   background-color: #ffee93;
   grid-area: main;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 10px 1fr 10px 1fr;
+  grid-template-areas:  "projects-title announcements-title"
+                        "projects announcements"
+                        "projects trending-title"
+                        "projects trending";
+  padding: 1.5rem;
+  gap: 2rem;
 }
+
+.projects-title {
+  grid-area: projects-title;
+}
+
+.announcements-title {
+  grid-area: announcements-title;
+}
+
+.trending-title{
+  grid-area: trending-title;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+
+.main-section.projects{
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 2rem;
+}
+
+.project-card {
+  border: 1px solid lightblue;
+  padding: 1.5rem;
+  padding-left: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card-buttons{
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.main-section.announcements{
+  grid-area: announcements;
+}
+
+.main-section.trending {
+  grid-area: trending;
+}
+
 
 aside {
   grid-area: sidebar;
