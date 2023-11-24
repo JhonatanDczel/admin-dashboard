@@ -1,9 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  height: 100svh;
+}
+
 body {
-  min-height: 100svh;
-  width: 100vw;
-  background-color: green;
+  margin: 0;
+  display: grid;
+  height: 100%;
+  grid-template-rows: 180px 1fr;
+  grid-template-columns: minmax(200px, 2fr) 9fr;
+  grid-template-areas:  "sidebar header"
+                        "sidebar main";
 }
 
 header {
-  color: red;
+  background-color: green;
+  grid-area: header;
+}
+
+main {
+  background-color: yellow;
+  grid-area: main;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: blue;
 }
