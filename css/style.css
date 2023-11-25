@@ -208,19 +208,34 @@ aside {
   background-color: #b8e0d2;
   display: grid;
   align-content: start;
-  gap: 64px;
+  align-items: start;
 }
 
 .logo-container {
   background-color: #809bce;
   width: 100%;
   height: 70px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.logo-icon{
+  height: 60px;
+  width: 60px;
+}
+
+h1{
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
 }
 
 .sidebar-options {
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: #ff8fabaa;
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 16px;
   display: grid;
 }
 
@@ -228,12 +243,17 @@ aside {
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
-  gap: 16px;
+  gap: 10px;
+}
+
+.sidebar-options.social {
+  margin-bottom: 64px;
+  margin-top: 32px;
 }
 
 .sidebar-options > li > img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.9rem;
+  height: 1.9rem;
 }
 
 ul {
