@@ -218,8 +218,22 @@ aside {
 }
 
 .sidebar-options {
-  font-size: 24px;
+  font-size: 1.2rem;
   background-color: #ff8fabaa;
+  padding: 8px 8px 8px 32px;
+  display: grid;
+}
+
+.sidebar-options > li {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+}
+
+.sidebar-options > li > img {
+  width: 2rem;
+  height: 2rem;
 }
 
 ul {
